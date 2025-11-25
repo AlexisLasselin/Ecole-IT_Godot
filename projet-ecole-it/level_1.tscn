@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://rof6lei8kf1c"]
+[gd_scene load_steps=9 format=4 uid="uid://rof6lei8kf1c"]
 
 [ext_resource type="Texture2D" uid="uid://d1x28p7gaes57" path="res://Blue.png" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://dfohxywvgcoad" path="res://platforms.png" id="2_epypp"]
@@ -197,25 +197,40 @@ physics_layer_3/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 sources/1 = SubResource("TileSetAtlasSource_0hol4")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ihfcg"]
+b = Vector2(3, 666)
+
 [node name="Node2D" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1150.0
+offset_bottom = 670.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_wtcfe")
 stretch_mode = 1
 
-[node name="CharacterBody2D" parent="CanvasLayer" instance=ExtResource("4_ihfcg")]
-position = Vector2(21, 461)
-
-[node name="Layer0" type="TileMapLayer" parent="CanvasLayer"]
+[node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAAAAsAAAAAAAEAAAAAAAwAAAAAAAEAAAAAAA0AAAAAAAEAAAABAAsAAAAAAAEAAAABAAwAAAAAAAEAAAABAA0AAAAAAAEAAAACAAsAAAAAAAEAAAACAAwAAAAAAAEAAAACAA0AAAAAAAEAAAADAAsAAAAAAAEAAAADAAwAAAAAAAEAAAADAA0AAAAAAAEAAAAEAAsAAAAAAAEAAAAEAAwAAAAAAAEAAAAEAA0AAAAAAAEAAAAFAAsAAAAAAAEAAAAFAAwAAAAAAAEAAAAFAA0AAAAAAAEAAAAGAAsAAAAAAAEAAAAGAAwAAAAAAAEAAAAGAA0AAAAAAAEAAAAHAAsAAAAAAAEAAAAHAAwAAAAAAAEAAAAHAA0AAAAAAAEAAAAIAAsAAAAAAAEAAAAIAAwAAAAAAAEAAAAIAA0AAAAAAAEAAAAJAAsAAAAAAAEAAAAJAAwAAAAAAAEAAAAJAA0AAAAAAAEAAAAKAAsAAAAAAAEAAAAKAAwAAAAAAAEAAAAKAA0AAAAAAAEAAAAPAAsAAAAAAAEAAAAPAAwAAAAAAAEAAAAPAA0AAAAAAAEAAAAQAAsAAAAAAAEAAAAQAAwAAAAAAAEAAAAQAA0AAAAAAAEAAAARAAsAAAAAAAEAAAARAAwAAAAAAAEAAAARAA0AAAAAAAEAAAASAAsAAAAAAAEAAAASAAwAAAAAAAEAAAASAA0AAAAAAAEAAAATAAsAAAAAAAEAAAATAAwAAAAAAAEAAAATAA0AAAAAAAEAAAAUAAsAAAAAAAEAAAAUAAwAAAAAAAEAAAAUAA0AAAAAAAEAAAAVAAsAAAAAAAEAAAAVAAwAAAAAAAEAAAAVAA0AAAAAAAEAAAAWAAsAAAAAAAEAAAAWAAwAAAAAAAEAAAAWAA0AAAAAAAEAAAAXAAsAAAAAAAEAAAAXAAwAAAAAAAEAAAAXAA0AAAAAAAEAAAAAAAoAAAAAAAAAAAABAAoAAAAAAAAAAAACAAoAAAAAAAAAAAADAAoAAAAAAAAAAAAEAAoAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAoAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAJAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAARAAoAAAAAAAAAAAASAAoAAAAAAAAAAAATAAoAAAAAAAAAAAAUAAoAAAAAAAAAAAAVAAoAAAAAAAAAAAAWAAoAAAAAAAAAAAAXAAoAAAAAAAAAAAALAAoAAAAJAAAAAAAOAAoAAAALAAAAAAAMAAoAAAAKAAAAAAANAAoAAAAKAAAAAAAIAAcAAAAAAAMAAAAIAAgAAAAAAAQAAAAIAAkAAAAAAAUAAAAUAAcAAAAAAAMAAAAUAAgAAAAAAAQAAAAUAAkAAAAAAAUAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAUAAAADAAkAAAABAAYAAAAQAAkAAAABAAYAAAAPAAkAAAABAAUAAAARAAkAAAABAAUAAAAWAAkAAAAIAAMAAAA=")
 tile_set = SubResource("TileSet_q6r6c")
+
+[node name="Mur Gauche" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur Gauche"]
+shape = SubResource("SegmentShape2D_ihfcg")
+
+[node name="Mur Droit" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mur Droit"]
+position = Vector2(1150, 0)
+shape = SubResource("SegmentShape2D_ihfcg")
+
+[node name="Player" parent="." instance=ExtResource("4_ihfcg")]
+z_index = 1
+position = Vector2(114, 425)
