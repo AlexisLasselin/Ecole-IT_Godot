@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Projet_Ecole_IT"
-run/main_scene="res://level_1.tscn"
+run/main_scene="res://Scenes/level_1.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
+
+[autoload]
+
+EventController="*res://Scripts/event_controller.gd"
+GameController="*res://Scripts/game_controller.gd"
 
 [input]
 

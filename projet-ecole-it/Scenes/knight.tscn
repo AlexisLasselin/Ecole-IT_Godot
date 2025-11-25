@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://dynlug5qhoj40"]
 
-[ext_resource type="Script" uid="uid://nx8arcx2cmlr" path="res://knight.gd" id="1_nsuie"]
-[ext_resource type="Texture2D" uid="uid://pk5h5kebyea3" path="res://knight.png" id="1_owtlo"]
+[ext_resource type="Script" uid="uid://nx8arcx2cmlr" path="res://Scripts/knight.gd" id="1_nsuie"]
+[ext_resource type="Texture2D" uid="uid://pk5h5kebyea3" path="res://Sprites/knight.png" id="1_owtlo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsuie"]
 size = Vector2(12, 19)
@@ -193,7 +193,6 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 50
 scale = Vector2(2, 2)
 script = ExtResource("1_nsuie")
 
