@@ -3,27 +3,29 @@
 <details> <summary>Table des matières</summary>
 
 - [Atelier IT - Crée ton propre mini-jeu en pixel art](#atelier-it---crée-ton-propre-mini-jeu-en-pixel-art)
-	- [Présentation de l'atelier](#présentation-de-latelier)
-	- [Objectifs de l'atelier](#objectifs-de-latelier)
-	- [1. Introduction à Godot Engine](#1-introduction-à-godot-engine)
-	- [2. Création du niveau en pixel art](#2-création-du-niveau-en-pixel-art)
-		- [Ajout d'un TileMapLayer](#ajout-dun-tilemaplayer)
-		- [Importation des tuiles](#importation-des-tuiles)
-		- [Ajout de collisions aux tuiles](#ajout-de-collisions-aux-tuiles)
-	- [3. Ajout d'un personnage jouable](#3-ajout-dun-personnage-jouable)
-		- [Création du personnage](#création-du-personnage)
-		- [Ajout des sprites et animations](#ajout-des-sprites-et-animations)
-		- [Ajout des collisions au personnage](#ajout-des-collisions-au-personnage)
-		- [Ajout d'une caméra au personnage](#ajout-dune-caméra-au-personnage)
-		- [Ajout du personnage au niveau principal](#ajout-du-personnage-au-niveau-principal)
-		- [Ajout d'un script de déplacement au personnage](#ajout-dun-script-de-déplacement-au-personnage)
-	- [4. Ajout d'éléments interactifs](#4-ajout-déléments-interactifs)
-		- [Création de la pièce](#création-de-la-pièce)
-		- [Ajout de la pièce au niveau principal](#ajout-de-la-pièce-au-niveau-principal)
-		- [Création du script de la pièce](#création-du-script-de-la-pièce)
-		- [Création d'un gestionnaire de score](#création-dun-gestionnaire-de-score)
-		- [Connexion du gestionnaire de score à la pièce](#connexion-du-gestionnaire-de-score-à-la-pièce)
-		- [Ajout d'un affichage du score à l'écran](#ajout-dun-affichage-du-score-à-lécran)
+  - [Présentation de l'atelier](#présentation-de-latelier)
+  - [Objectifs de l'atelier](#objectifs-de-latelier)
+  - [1. Introduction à Godot Engine](#1-introduction-à-godot-engine)
+  - [2. Création du niveau en pixel art](#2-création-du-niveau-en-pixel-art)
+    - [Ajout d'un TileMapLayer](#ajout-dun-tilemaplayer)
+    - [Importation des tuiles](#importation-des-tuiles)
+    - [Ajout de collisions aux tuiles](#ajout-de-collisions-aux-tuiles)
+  - [3. Ajout d'un personnage jouable](#3-ajout-dun-personnage-jouable)
+    - [Création du personnage](#création-du-personnage)
+    - [Ajout des sprites et animations](#ajout-des-sprites-et-animations)
+    - [Ajout des collisions au personnage](#ajout-des-collisions-au-personnage)
+    - [Ajout d'une caméra au personnage](#ajout-dune-caméra-au-personnage)
+    - [Ajout du personnage au niveau principal](#ajout-du-personnage-au-niveau-principal)
+    - [Ajout d'un script de déplacement au personnage](#ajout-dun-script-de-déplacement-au-personnage)
+  - [4. Ajout d'éléments interactifs](#4-ajout-déléments-interactifs)
+    - [Création de la pièce](#création-de-la-pièce)
+    - [Ajout de la pièce au niveau principal](#ajout-de-la-pièce-au-niveau-principal)
+    - [Création du script de la pièce](#création-du-script-de-la-pièce)
+    - [Création d'un gestionnaire de score](#création-dun-gestionnaire-de-score)
+    - [Connexion du gestionnaire de score à la pièce](#connexion-du-gestionnaire-de-score-à-la-pièce)
+    - [Ajout d'un affichage du score à l'écran](#ajout-dun-affichage-du-score-à-lécran)
+  - [5. Exportation du jeu](#5-exportation-du-jeu)
+  - [Félicitations !](#félicitations-)
 
 </details>
 
@@ -318,3 +320,28 @@ func add_score():
 On sauvegarde le script avec `Ctrl + S` et on relance le jeu avec `F5` pour voir le résultat.
 
 Désormais, lorsque le personnage collecte une pièce, le texte changera pour afficher le score actuel à l'écran.
+
+Et voilà ! Nous avons créé un mini-jeu en pixel art avec Godot Engine, comprenant un niveau, un personnage jouable et des éléments interactifs.
+
+Maintenant, il est temps d'exporter le jeu pour l'avoir chez soi.
+
+## 5. Exportation du jeu
+
+Pour exporter le jeu, on va dans le menu `Projet` > `Exporter...`.
+
+Si c'est la première fois que vous exportez un projet, il faudra ajouter une configuration d'exportation en cliquant sur le bouton `Ajouter...` et en sélectionnant la plateforme souhaitée (Windows pour plus de simplicité).
+
+Ensuite, on clique sur le bouton `Exporter le projet` en bas, on choisit l'emplacement où enregistrer le fichier exécutable et on clique sur `Enregistrer` après avoir décoché l'export du debut.
+
+On va avoir 2 fichiers : un fichier exécutable (.exe) et un fichier de données (.pck).
+
+Vous pouvez maintenant utiliser le fichier exécutable pour lancer votre jeu sur n'importe quel ordinateur compatible !
+
+> Attention
+> Il est possible que votre antivirus détecte le fichier exécutable comme une menace, car il n'est pas signé numériquement. Il suffit de l'ajouter en exception pour pouvoir l'exécuter sans problème, ou alors, si vous êtes sous windows 11, de cliquer sur "Informations complémentaires" puis "Exécuter quand même".
+
+Vous pouvez désormais sélectionner les deux fichiers et les compresser dans une archive ZIP pour les partager facilement avec vos amis ou les publier en ligne.
+
+## Félicitations !
+
+Vous avez créé votre propre mini-jeu en pixel art avec Godot Engine ! N'hésitez pas à continuer à explorer les fonctionnalités de Godot et à ajouter plus de contenu à votre jeu, comme des ennemis, des niveaux supplémentaires ou des effets sonores. Amusez-vous bien !
