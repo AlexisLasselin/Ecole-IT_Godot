@@ -15,11 +15,6 @@ run/main_scene="res://Scenes/level_1.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
-[autoload]
-
-EventController="*res://Scripts/event_controller.gd"
-GameController="*res://Scripts/game_controller.gd"
-
 [input]
 
 jump={

@@ -1,8 +1,7 @@
 extends Node2D
 
-@export var value = 1
+@onready var score_manager = %ScoreManager
 
-func _on_area_2d_body_entered(body):
-	if body is Player:
-		GameController.coin_collected(value)
-		self.queue_free()
+func _on_body_entered(body: Node2D) -> void:
+	score_manager.add_score()
+	queue_free()
